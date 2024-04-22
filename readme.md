@@ -51,3 +51,8 @@ Heal bring a certain percentage of your health
 Buff on heal => heal% +  buff%
 
 Buff on precision => 10% - buff%
+
+------------------------------------------------Precision system--------------------------
+You start the game with a 10% chance of missing attacks 
+Each hit you take increase it ny 5%
+simulating the fact of losing strengh

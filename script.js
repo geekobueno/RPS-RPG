@@ -3,16 +3,17 @@ console.log("Welcome to Rock Paper Scissor RPG")
 let computerHp=100;
 let playerHp=100;
 let baseDmg=20
-let baseHeal=20
+let baseHeal=10
 let computerHeal=baseHeal
 let playerHeal=baseHeal
 let computerDmg=baseDmg
 let playerDmg=baseDmg
 
+
 console.log("Player HP : "+playerHp +"\n"+"Computer HP: "+computerHp )
 
 var choice = ["rock", "paper", "scissor"]
-var playerClass = ["Knight", "Warrior", "Magician"]
+var playerClass = ["knight", "warrior", "magician"]
 
 function getComputerChoice(){
     let random=Math.floor(Math.random()*3)
@@ -77,9 +78,8 @@ function getComputerClass(){
 }
 
 function playGame(){
-   let playerClassSelect = getPlayerClass()
-   let computerClassSelect = getComputerClass()
-
+    let playerClassSelect = getPlayerClass()
+    let computerClassSelect = getComputerClass()
     while(playerHp>0 && computerHp>0){
        let playerChoice=getPlayerChoice()
        let computerChoice=getComputerChoice()
@@ -128,8 +128,6 @@ function playRound(playerSelection, computerSelection){
     return num;
 }
 
-playGame()
-
 function updateHp(c){
     if(c==1){
         playerHp=playerHp-computerDmg;
@@ -149,23 +147,49 @@ function updateHp(c){
 
 function healHp(playerSelection, computerSelection,playerMove, computerMove, winnerNbr){
     if (winnerNbr==2 && playerSelection==="knight" && playerMove==="scissor"){
-        playerHp=playerHp+playerHeal
+        if(playerHp<100){
+            playerHp=playerHp+playerHeal
+        }else{
+            playerHp=playerHp
+        }
         console.log("player made a successfull core attack, he gain health")
     }else if(winnerNbr==2 && playerSelection==="warrior" && playerMove==="rock"){
-        playerHp=playerHp+playerHeal
+        if(playerHp<100){
+            playerHp=playerHp+playerHeal
+        }else{
+            playerHp=playerHp
+        }
         console.log("player made a successfull core attack, he gain health")
     }else if(winnerNbr==2 && playerSelection==="magician" && playerMove==="paper"){
-        playerHp=playerHp+playerHeal
+        if(playerHp<100){
+            playerHp=playerHp+playerHeal
+        }else{
+            playerHp=playerHp
+        }
         console.log("player made a successfull core attack, he gain health")
     }
     else if(winnerNbr==1 && computerSelection==="knight" && computerMove==="scissor"){
-        computerHp=computerHp+computerHeal
+        if(computerHp<100){
+            computerHp=computerHp+computerHeal
+        }else{
+            computerHp=computerHp
+        }
         console.log("computer made a successfull core attack, he gain health")
     }else if(winnerNbr==1 && computerSelection==="warrior" && computerMove==="rock"){
-        computerHp=computerHp+computerHeal
+        if(computerHp<100){
+            computerHp=computerHp+computerHeal
+        }else{
+            computerHp=computerHp
+        }
         console.log("computer made a successfull core attack, he gain health")
     }else if(winnerNbr==1 && computerSelection==="magician" && computerMove==="paper"){
-        computerHp=computerHp+computerHeal
+        if(computerHp<100){
+            computerHp=computerHp+computerHeal
+        }else{
+            computerHp=computerHp
+        }
         console.log("computer made a successfull core attack, he gain health")
     }else{}
 }
+
+playGame()
