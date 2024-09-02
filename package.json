@@ -1,0 +1,23 @@
+{
+  "name": "rps-rpg",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissor RPG 🪨️🗞️✂️",
+  "main": "game.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geekobueno/RPS-RPG.git"
+  },
+  "author": "Geeko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geekobueno/RPS-RPG/issues"
+  },
+  "homepage": "https://github.com/geekobueno/RPS-RPG#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pixi.js": "^8.3.4"
+  }
+}
