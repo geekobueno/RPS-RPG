@@ -1,4 +1,4 @@
-console.log("Welcome to Rock Paper Scissor RPG")
+console.log("Welcome to Rock Paper Scissor RPG") 
 
 let maxHp = 100
 let computerHp = maxHp;
